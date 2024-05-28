@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="et">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#003cff" />
-    <script>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#003cff" />
+  <script>
       window._env_ = {
         RUUTER_API_URL: 'https://ruuter.prod.buerokratt.ee/v2/public/backoffice',
         NOTIFICATION_NODE_URL: 'https://ruuter.prod.buerokratt.ee',
         TIM_AUTHENTICATION_URL: 'https://tim.prod.buerokratt.ee/oauth2/authorization/tara?callback_url=https://admin.prod.buerokratt.ee'
       };
     </script>
-    
-    <title>Bürokratt</title>
-    <style>
+
+  <title>Bürokratt</title>
+  <style>
       html,
       body {
         height: 100%;
         width: 100%;
         margin: 0;
       }
-    </style>
-    <style>
-      
+
       @font-face {
         font-family: 'Aino Regular';
         src: url('./static/aino-fonts/Aino_31_170411-Regular.otf'), url('./static/aino-fonts/Aino_31_170411-Regular.woff2') format('woff2'),
@@ -48,7 +46,11 @@
         height: 100vh;
         position: relative;
         width: 100vw;
-        
+        font-size: 16px; /* Smaller base font size */
+      }
+
+      li {
+        line-height: 1.5; /* Adjusted line height */
       }
 
       .byk-logo {
@@ -58,7 +60,8 @@
 
       .byk-illustration {
         height: auto;
-        width: 30vw;
+        width: 20vw; /* Adjusted width */
+        padding: 2rem; /* Reduced padding */
       }
 
       .byk-calendar {
@@ -67,43 +70,57 @@
       }
 
       .byk-what {
-        align-items: center;
+        align-items: flex-start;
         background-color: #bae6e8;
         color: #00005a;
         display: flex;
         flex-flow: column wrap;
+        text-align: left;
+        padding: 1rem; /* Reduced padding */
+        padding-top: 1rem; /* Adjusted padding */
+        line-height: 1;
       }
 
       .byk-what h2 {
         align-self: flex-start;
+        font-size: 1.2em; /* Adjusted font size */
+      }
+
+      .byk-what h3 {
+        font-size: 16px; /* Adjusted font size */
+        margin: 0 0 0.25rem 0;
       }
 
       .byk-what p,
       .byk-what li {
-        font-size: 18px;
+        font-size: 0.9em; /* Adjusted font size */
       }
 
       .byk-benefits {
         align-self: flex-start;
-        margin: 0 0 1rem 0;
-        padding: 0 0 0 1rem;
+        margin: 0 0 0.5rem 0; /* Reduced margin */
+        padding: 0 0 0 0.5rem; /* Reduced padding */
       }
 
       .byk-benefits > li {
         color: #003cff;
         list-style-type: '+';
-        padding: 0 0 0 0.5rem;
+        padding: 0 0 0 0.5rem; /* Reduced padding */
       }
 
       .byk-what,
       .byk-why {
         justify-content: flex-start;
-        padding: 2rem;
+        padding: 1.5rem; /* Reduced padding */
+        padding-top: 3rem; /* Adjusted padding */
+        flex-basis: 50%; /* Ensure equal width */
       }
 
       .byk-why {
         background-color: #00005a;
         color: #fff;
+        text-align: left;
+        line-height: 1.5;
       }
 
       .byk-services {
@@ -111,28 +128,29 @@
         background-color: #ff4800;
         color: #fff;
         display: flex;
-        padding: 1.5rem;
+        padding: 1rem; /* Reduced padding */
+        flex-grow: 1; /* Ensure it grows to fill available space */
       }
 
       .byk-contact {
         align-items: center;
         display: flex;
         justify-content: flex-start;
-        padding: 1.5rem;
+        padding: 1rem; /* Reduced padding */
       }
 
       .byk-contact > p:last-of-type {
-        margin: 0 0 0 3rem;
+        margin: 0 0 0 2rem; /* Reduced margin */
       }
 
       .byk-why h3 {
         font-family: 'Aino Bold';
-        font-size: 16px;
+        font-size: 16px; /* Adjusted font size */
         margin: 0 0 0.25rem 0;
       }
 
       .byk-why p {
-        margin: 0 0 2rem 0;
+        margin: 0 0 1rem 0; /* Reduced margin */
       }
 
       .byk-what,
@@ -144,77 +162,103 @@
 
       h2 {
         font-family: 'Aino Headline';
-        margin: 0 0 1rem 0;
+        margin: 0 0 0.5rem 0; /* Reduced margin */
+        font-size: 1.2em; /* Adjusted font size */
       }
 
       main {
         display: flex;
         flex-grow: 1;
+        overflow: hidden; /* Prevent scrolling */
       }
 
       footer {
         background-color: #fff;
         color: #003cff;
         display: flex;
+        height: 10%; /* Adjust height */
       }
     </style>
-    
-  </head>
-  <body>
-    <noscript>Lehekülg nõuab JavaScript tehnoloogia tuge.</noscript>
 
-    <main>
-      <div class="byk-what">
-        <div>
-          <h2>Mis on Bürokratt?</h2>
-          <p>Virtuaalne abiline, tänu kellele ei kuluta sa riigiga suhtluseks enam ühtegi liigset hetke.</p>
-        </div>
+</head>
+<body>
+<noscript>Lehekülg nõuab JavaScript tehnoloogia tuge.</noscript>
 
-        <ul class="byk-benefits">
-          <li>vastused ühest kohast</li>
-          <li>usaldusväärne info</li>
-          <li>töötab 24/7</li>
-          <li>tasuta</li>
-          <li>vali ise suhtluskanal (chat, sms, e-mail, telefon, häälassistent)</li>
-        </ul>
+<main>
+  <div class="byk-what">
+    <div>
+      <h2>Mis on Bürokratt?</h2>
+      <p>Eesmärk on luua 2025.a. lõpuks virtuaalne abiline, tänu kellele ei kuluta sa riigiga suhtluseks enam ühtegi liigset hetke.</p>
+    </div>
 
-        <img src="./static/byk-illustration.png" alt="Buerokratt illustration" class="byk-illustration" />
+    <ul class="byk-benefits">
+      <li>vastused ühest kohast</li>
+      <li>usaldusväärne info</li>
+      <li>töötab 24/7</li>
+      <li>tasuta</li>
+      <li>vali ise suhtluskanal (chat, telefon, häälassistent)</li>
+    </ul>
+
+    <div>
+      <br>
+      <br>
+      <h2>Miks on Bürokratti vaja?</h2>
+      <br>
+      <div>
+        <h3>Probleem</h3>
+        <p>Kodanikud ei tea, millise asutuse poole pöörduda. Suhtlus riigiga on aeglane, puudub ülevaade nii kohustustest kui ka võimalustest.</p>
       </div>
-
-      <div class="byk-why">
-        <h2>Miks on Bürokratti vaja?</h2>
-        <div>
-          <h3>Probleem</h3>
-          <p>Kodanikud ei tea, millise asutuse poole pöörduda. Suhtlus riigiga on aeglane, puudub ülevaade nii kohustustest kui ka võimalustest.</p>
-        </div>
-        <div>
-          <h3>Võimalus</h3>
-          <p>Tehisintellekti ja eriti virtuaal-assistentide areng võimaldab probleemi lahendada senisest oluliselt paremini.</p>
-        </div>
-        <div>
-          <h3>Hetkeolukord</h3>
-          <p>Mobiilseadmeid kasutab ligikaudu 98% ja internetti 90% Eesti leibkondadest, nende levik näitab jätkuvat kasvu.</p>
-        </div>
-        <div>
-          <h3>Eesmärk</h3>
-          <p>Parem digiriigi kogemus läbi lihtsalt kasutatavate avalike teenuste.</p>
-        </div>
+      <div>
+        <h3>Võimalus</h3>
+        <p>Tehisintellekti ja eriti virtuaal-assistentide areng võimaldab probleemi lahendada senisest oluliselt paremini.</p>
       </div>
-    </main>
-
-    <footer>
-      <div class="byk-services">
-        <img src="./static/byk-calendar.png" alt="Buerokratt calendar" width="64" class="byk-calendar" />
-        <p>Esimesed Bürokrati teenused on juba kättesaadavad.</p>
+      <div>
+        <h3>Hetkeolukord</h3>
+        <p>Mobiilseadmeid kasutab ligikaudu 98% ja internetti 90% Eesti leibkondadest, nende levik näitab jätkuvat kasvu.</p>
       </div>
-
-      <div class="byk-contact">
-        <p>info@kratid.ee</p>
-        <p>buerokratt@ria.ee</p>
+      <div>
+        <h3>Eesmärk</h3>
+        <p>Parem digiriigi kogemus läbi lihtsalt kasutatavate avalike teenuste.</p>
       </div>
-    </footer>
+    </div>
 
-    <div id="byk-va"></div>
-    <script id="script-bundle" type="text/javascript" src="https://prod.buerokratt.ee/widget_bundle.js" crossorigin=""></script>
-  </body>
+    <img src="./static/byk-illustration.png" alt="Buerokratt illustration" class="byk-illustration" />
+  </div>
+
+  <div class="byk-why">
+    <h2>KEELEMUDELI TESTIMINE BÜROKRATIS</h2>
+    <br>
+    <p>Sel aastal hakkame Bürokratis kasutama suurt keelemudelit, et lihtsustada infootsinguid avaliku teabe osas.</p>
+    <p>Meie eesmärk on, et Bürokrati antavad vastused oleksid alati ajakohased ja täpsed - need on kaks tegurit, mis suure keelemudeli toel töötaval vestlusrobotil alati 100% ei õnnestu, sest neid on õpetatud olema oma vastustes loomingulised ja treeningandmed võivad vahel olla veidi vananenud.</p>
+    <p>Testime keelemudeli võimekust vastata küsimustele meie info põhjal, alustades sotsiaalvaldkonna teabega.</p>
+    <p>Testimiseks kasutatav info sisaldab:</p>
+    <ul>
+      <li>Kõik eesti.ee veebilehel asuvad infoartiklid eraisiku toetuste, sotsiaalteenuste ja pensionite kohta</li>
+      <li>Eesti.ee lehel eraisiku makse ja raha puudutavad artiklid</li>
+      <li>Eelnimetatud artiklitega seotud veebilehed</li>
+      <li>Riigi Teataja sotsiaalvaldkonnaga seotud õigusaktid</li>
+      <li>Testimise käigus kasutatakse teavet seisuga xx.xx.2024</li>
+    </ul>
+    <p>Aidake testida Bürokratti, esitades sotsiaalvaldkonna ja maksudega seotud küsimusi ning andes tagasisidet vastuste täpsuse kohta.</p>
+    <br>
+    <h3>Mida küsida?</h3>
+    <p>Küsige riiklike toetuste, hüvitiste, pensionite, sotsiaalteenuste ja eraisiku maksude kohta. Kui Bürokratil puudub info, peaks ta seda selgelt väljendama.</p>
+    <p>Tagasiside andmiseks lõpetage vestlus vestlusakna üleval paremal serval ning hinnake vestlust skaalal 1-10, lisades võimalusel kommentaari.</p>
+    <p>AITÄH ABI EEST!</p>
+  </div>
+</main>
+
+<footer>
+  <div class="byk-services">
+
+  </div>
+
+  <div class="byk-contact">
+    <p>info@ria.ee</p>
+  </div>
+</footer>
+
+<div id="byk-va"></div>
+<script id="script-bundle" type="text/javascript" src="https://prod.buerokratt.ee/widget_bundle.js" crossorigin=""></script>
+</body>
 </html>
