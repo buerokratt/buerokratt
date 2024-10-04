@@ -47,6 +47,7 @@
         position: relative;
         width: 100vw;
         font-size: 16px; /* Smaller base font size */
+        overflow: hidden;
       }
 
       li {
@@ -114,6 +115,7 @@
         padding: 1.5rem; /* Reduced padding */
         padding-top: 3rem; /* Adjusted padding */
         flex-basis: 50%; /* Ensure equal width */
+        box-sizing: border-box;
       }
 
       .byk-why {
@@ -169,7 +171,10 @@
       main {
         display: flex;
         flex-grow: 1;
-        overflow: hidden; /* Prevent scrolling */
+        /*Added this fields*/
+        flex-wrap: wrap;
+        justify-content: space-between;
+        overflow-y: auto; /* Prevent scrolling */
       }
 
       footer {
@@ -178,6 +183,17 @@
         display: flex;
         height: 10%; /* Adjust height */
       }
+
+      /* Media query for smaller screens */
+      @media (max-width: 768px) {
+        .byk-what,
+        .byk-why {
+          flex-basis: 100%; /* Full width for each section */
+        }
+      }
+      
+
+      
     </style>
 
 </head>
