@@ -5,8 +5,8 @@
 - **Version:** 1.0.0
 - **Status:** Draft
 - **Last Updated:** N/A
-- **Reviewed By:** Markko Liutkevicius
-- **Approvers:** Rainer Türner, Markko Liutkevicius
+- **Reviewed By:** Markko Liutkevičius
+- **Approvers:** Rainer Türner, Markko Liutkevičius
 
 ---
 
