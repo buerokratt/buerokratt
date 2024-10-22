@@ -1,4 +1,4 @@
-# Technical stack in use
+# Bürokratt's Technical Stack
 
 - **Author:** Rainer Türner
 - **Date:** 22.10.2024
@@ -18,7 +18,7 @@
 
 ```mermaid
 timeline
-    title Technical stack in use
+    title Bürokratt's Technical Stack
 
     section In-house developments
         Java    :   Ruuter
@@ -44,6 +44,14 @@ timeline
         Services    :   TARA
                     :   X-Road
         SaaS        :   Azure AI Studio (gpt-4o)
+    
+    section Data exchange standards
+        Protocols   :   SSE (Server-Sent Events)
+                    :   HTTP
+        Data formats    :   JSON
+                        :   Text
+                        :   YAML
+                        :   XML (to be removed - currently used in Liquibase changelogs)
     
     section Deployment
         Version control :   GitHub (github.com/buerokratt)
