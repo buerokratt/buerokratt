@@ -28,8 +28,8 @@ timeline
         React   :   Chat Widget
                 :   Backoffice GUI
         Based on external libraries :   Data Mapper<br>(handlebarsjs.com)
-        Bürokratt DSL   :   Backoffice back-end
-                        :   Notification service
+        Based on Bükstack   :   Backoffice back-end
+                            :   Notification service
 
     section Third-party components
         Web servers :   Nginx
