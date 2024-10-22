@@ -48,6 +48,8 @@ timeline
     section Deployment
         Version control :   GitHub (github.com/buerokratt)
                         :   GitHub Package Registry
+        Secrets         :   AS IS -- Custom solution based on text files and deployment scripts
+                        :   TO BE -- replaced with Vault by Hashicorp
         Orchestration   :   GitHub Actions
                         :   Kubernetes
         Platforms       :   Estonian Government Cloud
