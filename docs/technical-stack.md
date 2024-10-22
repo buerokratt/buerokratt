@@ -49,7 +49,7 @@ timeline
         Version control :   GitHub (github.com/buerokratt)
                         :   GitHub Package Registry
         Secrets         :   AS IS -- Custom solution based on text files and deployment scripts
-                        :   TO BE -- replaced with Vault by Hashicorp
+                        :   TO BE -- Vault by Hashicorp
         Orchestration   :   GitHub Actions
                         :   Kubernetes
         Platforms       :   Estonian Government Cloud
