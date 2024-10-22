@@ -1,4 +1,4 @@
-# Bürokratt's Technical Stack
+# Technical stack in use
 
 - **Author:** Rainer Türner
 - **Date:** 22.10.2024
@@ -46,8 +46,8 @@ timeline
         SaaS        :   Azure AI Studio (gpt-4o)
     
     section Data exchange standards
-        Protocols   :   SSE (Server-Sent Events)
-                    :   HTTP
+        Protocols   :   HTTP
+                    :   SSE (Server-Sent Events)
         Data formats    :   JSON
                         :   Text
                         :   YAML
