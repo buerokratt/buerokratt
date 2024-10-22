@@ -60,6 +60,7 @@ timeline
                         :   TO BE -- Vault by Hashicorp
         Orchestration   :   GitHub Actions
                         :   Kubernetes
+                        :   Docker
         Platforms       :   Estonian Government Cloud
                         :   RIA on-prem
 ```
